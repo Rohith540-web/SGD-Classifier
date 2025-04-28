@@ -7,11 +7,55 @@ To write a program to predict the type of species of the Iris flower using the S
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1.Import Necessary Libraries and Load Data
-2.Split Dataset into Training and Testing Sets
-3.Train the Model Using Stochastic Gradient Descent (SGD)
-4.Make Predictions and Evaluate Accuracy
-5.Generate Confusion Matrix
+1. Load Dataset:
+Load the Iris dataset.
+
+Convert the dataset into a pandas DataFrame.
+
+The dataset includes both features (sepal length, width, petal length, width) and the target class (target).
+
+2. Preprocess the Data:
+Data Splitting: Split the data into:
+
+Features (X): Columns representing the characteristics of the iris flowers.
+
+Target (y): Column representing the species of the flower.
+
+Train-Test Split:
+
+Split the data into training (80%) and testing (20%) sets using train_test_split().
+
+3. Model Initialization:
+Initialize the SGDClassifier with the following parameters:
+
+Max Iterations (max_iter): Set to 1000 iterations for the model to converge.
+
+Tolerance (tol): Set to 1e-3 to define the stopping criterion (tolerance for the loss function to stop updating).
+
+4. Train the Model:
+Fit the SGDClassifier using the training data (X_train, y_train).
+
+The classifier uses Stochastic Gradient Descent to minimize the loss function and find the best coefficients for the model.
+
+5. Predict on Test Data:
+Use the trained model to predict the classes for the test set (X_test).
+
+6. Evaluate the Model:
+Accuracy: Compute the model’s accuracy score using accuracy_score() based on the predictions (y_pred) and true values (y_test).
+
+Confusion Matrix: Generate the confusion matrix to evaluate the performance of the model in terms of true positives, false positives, true negatives, and false negatives for each class.
+
+Classification Report: Generate the classification report to get a detailed analysis of precision, recall, F1-score, and support for each class.
+
+7. Make New Predictions:
+Input a new sample (new flower data) and predict its class using the trained model.
+
+8. Output:
+The accuracy score, confusion matrix, and classification report of the model’s performance on the test set.
+
+Predictions for new samples.
+
+
 
 ## Program:
 ```
